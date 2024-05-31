@@ -15,7 +15,7 @@
         <input type="text" id="name" name="name"><br><br>
         <label for="password">Password</label>
         <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Submit">
+        <input type="submit" name="login" value="Submit">
 
     </form>
 </body>
@@ -40,5 +40,11 @@
                         "NEPAL" => "Kathmandu");
 
     echo $capitals['NEPAL']; */
+
+
+    foreach($_POST as $key => $value)
+    {
+        echo "{$key} = {$value}" ."<br>";
+    }
 
 ?>

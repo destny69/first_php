@@ -46,7 +46,7 @@
     {
         echo "{$key} = {$value}" ."<br>";
     }
-    */
+ 
     if(isset($_POST['login'])) 
     {
       
@@ -65,6 +65,21 @@
         {
             echo "Welcome {$username}";
         }
+    }
+       */
+
+    $password = "destiny69";
+
+    $hash = password_hash($password,PASSWORD_DEFAULT);
+
+    if (isset($_POST["login"])) {
+        $user_password = $_POST["password"];
+        if (password_verify($user_password, $hash)) {
+            echo "Password is valid!";
+            } 
+        else {
+            echo "Invalid password.";
+            }
     }
 
 ?>

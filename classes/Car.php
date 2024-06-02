@@ -15,17 +15,17 @@ class Car {
 
         $this->id = $id;
         $this->brand = $brand;
-        $this->setcolor($color);
+        $this->setColor($color);
 
     }
 
-    public function getbrand()
+    public function getBrand()
     {
         return $this->brand;
     }
 
 
-    public function setcolor($color){
+    public function setColor($color){
 
         $allowed_color = [
             'red',
@@ -39,6 +39,10 @@ class Car {
         if (in_array($color, $allowed_color))
         {
             $this->color = $color;
+        }
+        else
+        {
+            echo "Color doesn't match!!";
         }
 
     }

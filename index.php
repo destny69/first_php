@@ -4,12 +4,11 @@
 
     require_once 'classes/Car.php';
 
-    $car = new Car(1,"BMW",'purple');
-    echo $car->getbrand().'<br>';
+    $car = new Car(1,"BMW",'red');
+    echo $car->getBrand().'<br>';
 
-    $car->setcolor('red');
-    echo $car->getcolor();
-
+ 
+    echo $car->getColor();
 
 
 
